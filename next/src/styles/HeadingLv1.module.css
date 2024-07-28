@@ -1,0 +1,13 @@
+.HeadingLv1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+.HeadingLv1--switchbot {
+  border-color: #D13938;
+}
+.HeadingLv1--alexa {
+  border-color: #08ACCF;
+}

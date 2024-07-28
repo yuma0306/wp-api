@@ -1,0 +1,35 @@
+/*
+
+# theme
+!/wp-content/
+/wp-content/*
+/wp-content/.htaccess
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/wp-next/
+
+# .htaccess
+!.htaccess
+
+# gulp
+!/src
+!gulpfile.js
+!package.json
+
+# editor
+!.editorconfig
+
+# ignore
+!.gitignore
+
+# .github
+!/.github
+
+# robots.txt
+!robots.txt
+
+# docker
+!docker-compose.yml
+
+# README.md
+!README.md
