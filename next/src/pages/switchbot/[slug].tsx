@@ -33,6 +33,7 @@ export default function Article({ post }: { post: PostType }) {
   return (
     <>
       <Head>
+        <meta name="robots" content="noindex" />
         <title>{post.acf.meta_title_field}</title>
         <meta name="description" content={post.acf.meta_desc_field} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
