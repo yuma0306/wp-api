@@ -2,10 +2,11 @@ import styles from '@/styles/WpEditor.module.css';
 
 type Props = {
   children: React.ReactNode;
+  addClass?: string;
 };
 
-export default function Editor({ children }: Props) {
+export default function WpEditor({ children, addClass }: Props) {
   return (
-    <div className={`${styles.wpEditor}`} dangerouslySetInnerHTML={{ __html: `${children}` || '' }}></div>
+    <div className={`${styles.wpEditor} ${addClass}`} dangerouslySetInnerHTML={{ __html: `${children}` || '' }}></div>
   );
 }

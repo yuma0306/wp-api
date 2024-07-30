@@ -19,6 +19,7 @@ import styles from '@/styles/WpImg.module.css';
 export default function WpImg({ imgID }: { imgID: number }) {
   // 画像のファイル名、幅、高さ、alt属性を格納
   const [imageFile, setImageFile] = useState<unknown>(null);
+  const [imageFileName, setImageFileName] = useState<unknown>(null);
   const [imageDimensions, setImageDimensions] = useState<{ width: number; height: number } | null>(null);
   const [altText, setAltText] = useState<string>('');
   // 画像のURLを取得
@@ -26,17 +27,18 @@ export default function WpImg({ imgID }: { imgID: number }) {
     const getImageUrl = async () => {
       const mediaDetails = await fetchImg(imgID);
       setImageFile(mediaDetails.file);
+      setImageFileName((mediaDetails.file as string).split('/').pop());
       setImageDimensions({ width: mediaDetails.width as number, height: mediaDetails.height as number });
       setAltText(mediaDetails.alt);
     };
     getImageUrl();
   }, [imgID]);
   if (!imageFile || !imageDimensions) return null;
-
+  console.log(imageFile);
   return (
     <picture className={`${styles.WpImg}`}>
       <Image
-        src={`${mediaUrl}${imageFile}`}
+        src={process.env.NODE_ENV === 'development' ? `${mediaUrl}${imageFile}` : `/img/${imageFileName}`}
         alt={altText}
         width={imageDimensions.width}
         height={imageDimensions.height}

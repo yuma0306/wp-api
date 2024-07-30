@@ -37,7 +37,6 @@ html {
 body {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px 0;
   color: #333;
 }
 
@@ -425,4 +424,21 @@ th {
 
 picture {
   display: block;
+}
+
+/**
+* 追加機能
+*/
+p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+.u-mt10 {
+  margin-top: 10px;
+}
+.u-mt20 {
+  margin-top: 20px;
+}
+.u-mt30 {
+  margin-top: 30px;
 }

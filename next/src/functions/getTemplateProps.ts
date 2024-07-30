@@ -9,6 +9,7 @@ export const getTemplateProps = (template: string): GetStaticProps => async ({ p
   // postsはPostType型のオブジェクトが複数含まれる配列
   const posts: PostType[] = await res.json();
   const post = posts.filter(item => item.template === template)[0];
+  // console.log(post);
   if (!post) {
     return {
       notFound: true,

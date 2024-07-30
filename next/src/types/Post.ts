@@ -11,7 +11,7 @@ export type AcfLPFlexibleType = {
   };
 };
 
-export type AcfMetaType = {
+export type AcfType =  {
   canonical_field: string;
   meta_desc_field: string;
   meta_title_field: string;
@@ -19,9 +19,12 @@ export type AcfMetaType = {
   noindex_field: boolean;
   og_image_field: string;
   og_url_field: string;
-};
-
-export type AcfType = AcfMetaType & {
+  tool_fv: number;
+  tool_feature: {
+    tool_feature_title: string;
+    tool_feature_desc: string;
+    tool_feature_img: number;
+  }[];
   lp_flexible: AcfLPFlexibleType[];
 };
 
