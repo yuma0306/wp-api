@@ -1,0 +1,14 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+	.WpEditor {
+		display: block;
+	}
+}
+
+@include sp {
+	.WpEditor {
+		display: block;
+	}
+}

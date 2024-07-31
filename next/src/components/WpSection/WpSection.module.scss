@@ -1,0 +1,14 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .WpSection {
+    padding: 60px 0;
+  }
+}
+
+@include sp {
+  .WpSection {
+    padding: vw(60) 0;
+  }
+}

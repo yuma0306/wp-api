@@ -1,0 +1,15 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .Inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@include sp {
+  .Inner {
+    margin: 0 vw(20);
+  }
+}
