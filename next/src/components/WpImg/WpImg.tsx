@@ -14,7 +14,7 @@ import { mediaUrl } from '@/constants/wp';
 /**
  * Styles
  */
-import styles from '@/styles/WpImg.module.css';
+import styles from '@/components/WpImg/WpImg.module.scss';
 /**
  * Export default
  */

@@ -1,4 +1,4 @@
-import styles from '@/styles/WpSection.module.css';
+import styles from '@/components/WpSection/WpSection.module.scss';
 
 type Props = {
   children: React.ReactNode;
