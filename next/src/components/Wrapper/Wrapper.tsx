@@ -1,7 +1,7 @@
 /**
  * Style
  */
-import styles from '@/components/WpEditor/WpEditor.module.scss';
+import styles from '@/components/Wrapper/Wrapper.module.scss';
 
 type Props = {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ type Props = {
 export default function Wrapper({ children, addClass }: Props) {
   return (
     <>
-      <div className={`${styles.wpEditor} ${addClass}`}>
+      <div className={`${styles.wrapper} ${addClass}`}>
         { children }
       </div>
     </>

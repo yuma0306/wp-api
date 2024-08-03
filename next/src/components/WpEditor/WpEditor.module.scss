@@ -2,13 +2,13 @@
 @use '../../styles/config/import' as *;
 
 @include pc {
-	.WpEditor {
+	.wpEditor {
 		display: block;
 	}
 }
 
 @include sp {
-	.WpEditor {
+	.wpEditor {
 		display: block;
 	}
 }

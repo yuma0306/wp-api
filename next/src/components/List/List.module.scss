@@ -1,0 +1,35 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .list {
+    display: grid;
+    padding: 24px 0;
+    gap: 48px;
+    &__item {
+      display: flex;
+      gap: 24px;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+    &__block {
+      flex: 1;
+    }
+    &__dl {
+      flex: 1;
+    }
+    &__term {
+      font-size: 24px;
+      font-weight: $fwBold;
+    }
+    &__desc {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include sp {
+  .list {
+  }
+}

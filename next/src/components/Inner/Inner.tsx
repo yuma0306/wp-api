@@ -11,7 +11,7 @@ type Props = {
 export default function Inner({ children, addClass }: Props) {
   return (
     <>
-      <div className={`${styles.Inner} ${addClass}`}>
+      <div className={`${styles.inner} ${addClass}`}>
         { children }
       </div>
     </>

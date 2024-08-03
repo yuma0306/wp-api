@@ -1,7 +1,7 @@
 ## やること
+- OGPなどSEO周りのタグ修正
 - FAQ作成
 - Footer作成（Zennと同じ感じ）
-- OGPなどSEO周りのタグ修正
 - typesファイルの整理
 
 - 相対パスで出力してGitHubPagesで表示できるようにする
@@ -28,3 +28,5 @@
 1. `cd next` & `node img.js`でWPのREST APIから画像をpublic/imgにダウンロード
 1. `npm run build`でビルド
 1. LP完成
+
+useRouterはクライアントサイドでのみ動作するため、SSG（静的サイト生成）では使用できません。

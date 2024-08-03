@@ -2,14 +2,14 @@
 @use '../../styles/config/import' as *;
 
 @include pc {
-  .Inner {
+  .inner {
     max-width: 1000px;
     margin: 0 auto;
   }
 }
 
 @include sp {
-  .Inner {
+  .inner {
     margin: 0 vw(20);
   }
 }

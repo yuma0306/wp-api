@@ -2,13 +2,13 @@
 @use '../../styles/config/import' as *;
 
 @include pc {
-  .Wrapper {
+  .wrapper {
     overflow-x: hidden;
   }
 }
 
 @include sp {
-  .Wrapper {
+  .wrapper {
     overflow-x: hidden;
   }
 }

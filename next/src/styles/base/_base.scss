@@ -1,25 +1,25 @@
 @use "../global/import" as *;
 @use "../config/import" as *;
 
-// font-face
-@font-face {
-	src: url(#{$fontPath}/NotoSansJP-Regular.ttf) format('truetype');
-	font-family: "Noto Sans JP";
-	font-weight: 400;
-	font-display: swap;
-}
-@font-face {
-	src: url(#{$fontPath}/NotoSansJP-Medium.ttf) format('truetype');
-	font-family: "Noto Sans JP";
-	font-weight: 500;
-	font-display: swap;
-}
-@font-face {
-	src: url(#{$fontPath}/NotoSansJP-Bold.ttf) format('truetype');
-	font-family: "Noto Sans JP";
-	font-weight: 700;
-	font-display: swap;
-}
+// // font-face
+// @font-face {
+// 	src: url(#{$fontPath}/NotoSansJP-Regular.ttf) format('truetype');
+// 	font-family: "Noto Sans JP";
+// 	font-weight: 400;
+// 	font-display: swap;
+// }
+// @font-face {
+// 	src: url(#{$fontPath}/NotoSansJP-Medium.ttf) format('truetype');
+// 	font-family: "Noto Sans JP";
+// 	font-weight: 500;
+// 	font-display: swap;
+// }
+// @font-face {
+// 	src: url(#{$fontPath}/NotoSansJP-Bold.ttf) format('truetype');
+// 	font-family: "Noto Sans JP";
+// 	font-weight: 700;
+// 	font-display: swap;
+// }
 
 body {
 	font-family: "Noto Sans JP", sans-serif;

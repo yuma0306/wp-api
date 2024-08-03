@@ -37,7 +37,7 @@ export default function WpImg({ imgID }: { imgID: number }) {
   }, [imgID]);
   if (!imageFile || !imageDimensions) return null;
   return (
-    <picture className={`${styles.WpImg}`}>
+    <picture className={`${styles.wpImg}`}>
       <Image
         src={process.env.NODE_ENV === 'development' ? `${mediaUrl}${imageFile}` : `/img/${imageFileName}`}
         alt={altText}

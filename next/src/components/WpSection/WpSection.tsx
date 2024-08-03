@@ -7,7 +7,7 @@ type Props = {
 
 export default function WpSection({ children, addClass }: Props) {
   return (
-    <section className={`${styles.WpSection} ${addClass && styles[addClass]}`}>
+    <section className={`${styles.wpSection} ${addClass && styles[addClass]}`}>
       {children}
     </section>
   );
