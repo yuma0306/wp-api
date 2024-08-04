@@ -1,7 +1,8 @@
 ## やること
 - componentのstory bookを作成
 - index.htmlではそのテンプレートの一覧を表示
-- 大元のindex.htmlではすべてのテンプレートのリストを表示
+"plugin:storybook/recommended"
+
 
 - vercelにoutディレクトリをデプロイ
 - テストコードを書いてみる
