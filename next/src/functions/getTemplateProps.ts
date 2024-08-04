@@ -5,6 +5,7 @@ import type { PostType } from '@/types/Post';
 // 最初のアロー関数は、templateを引数として受け取り、「GetStaticProps型」の関数を返す
 // 返された関数は、GetStaticPropsの仕様に従って非同期関数として定義
 export const getTemplateProps = (template: string): GetStaticProps => async ({ params }) => {
+  console.log(params);
   const res = await fetch(`http://localhost/wp-json/wp/v2/pages/?slug=${params?.slug}`);
   // postsはPostType型のオブジェクトが複数含まれる配列
   const posts: PostType[] = await res.json();
@@ -18,6 +19,7 @@ export const getTemplateProps = (template: string): GetStaticProps => async ({ p
   return {
     props: {
       post, // postをpropsとして渡す
+      slug: params?.slug,
     },
   };
 };

@@ -1,9 +1,14 @@
 ## やること
+- OGPなどSEO周りのタグ修正
+- FAQ作成
+- Footer作成（Zennと同じ感じ）
 - typesファイルの整理
-- sassの導入（コンポーネントごとにファイルを作成する）
+
+- 相対パスで出力してGitHubPagesで表示できるようにする
 - テストコードを書いてみる
 - 下記のLPをWPから静的に作成する
-- OGPなどSEO周りのタグ修正
+- index.htmlではそのテンプレートの一覧を表示
+- 大元のindex.htmlではすべてのテンプレートのリストを表示
 
 ## LP
 - WEB開発ツール紹介
@@ -23,3 +28,5 @@
 1. `cd next` & `node img.js`でWPのREST APIから画像をpublic/imgにダウンロード
 1. `npm run build`でビルド
 1. LP完成
+
+useRouterはクライアントサイドでのみ動作するため、SSG（静的サイト生成）では使用できません。

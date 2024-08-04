@@ -1,0 +1,17 @@
+/*
+* base
+*/
+@use 'base/import' as b;
+/*
+* module
+*/
+@use '../components/Inner/Inner.module.scss' as *;
+@use '../components/List/List.module.scss' as *;
+@use '../components/WpEditor/WpEditor.module.scss' as *;
+@use '../components/WpImg/WpImg.module.scss' as *;
+@use '../components/WpSection/WpSection.module.scss' as *;
+@use '../components/Wrapper/Wrapper.module.scss' as *;
+/*
+* utility
+*/
+@use 'utility/import' as u;

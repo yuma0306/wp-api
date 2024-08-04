@@ -1,0 +1,23 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+	.wpImg {
+		display: block;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    img {
+      height: 100%;
+    }
+	}
+}
+
+@include sp {
+	.wpImg {
+		display: block;
+    aspect-ratio: 16/9;
+    img {
+      height: 100%;
+    }
+	}
+}
