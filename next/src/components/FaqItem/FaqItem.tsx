@@ -13,7 +13,7 @@ type Props = {
 /**
  * Styles
  */
-import styles from './FaqItem.module.scss';
+import styles from '@/components/FaqItem/FaqItem.module.scss';
 
 export default function FaqItem({ question, answer }: Props) {
   const [isActive, setIsActive] = useState<boolean>(false);
