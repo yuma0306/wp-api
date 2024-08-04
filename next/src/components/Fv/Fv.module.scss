@@ -2,14 +2,14 @@
 @use '../../styles/config/import' as *;
 
 @include pc {
-  .inner {
-    max-width: vwMin($innerWidthPC);
+  .fv {
+    max-width: #{$innerWidthPC}px;
     margin: 0 auto;
   }
 }
 
 @include sp {
-  .inner {
-    margin: 0 vw($innerWidthSP);
+  .fv {
+    width: 100%;
   }
 }

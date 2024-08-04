@@ -7,6 +7,6 @@ type Props = {
 
 export default function WpEditor({ children, addClass }: Props) {
   return (
-    <div className={`${styles.wpEditor} ${addClass}`} dangerouslySetInnerHTML={{ __html: `${children}` || '' }}></div>
+    <div className={`${styles.wpEditor} ${addClass ? addClass : ''}`} dangerouslySetInnerHTML={{ __html: `${children}` || '' }}></div>
   );
 }

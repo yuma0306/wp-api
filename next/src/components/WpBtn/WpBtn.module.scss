@@ -1,0 +1,54 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+	.wpBtn {
+    position: relative;
+		display: block;
+    max-width: 500px;
+    width: fit-content;
+    margin: #{$spaceMedium}px auto 0;
+    padding: #{$spaceSmall}px #{$spaceMedium}px;
+    border-radius: 100vh;
+    background: $accentBg;
+    box-shadow: 0 3px 0 0 $accentShadow;
+    text-align: center;
+    transition: transform $transition, box-shadow $transition;
+    &__text {
+      display: block;
+      color: $white01;
+      font-weight: $fwMedium;
+      font-size: #{$fzMedium}px;
+    }
+    &:hover {
+      box-shadow: none;
+      transform: translateY(3px);
+    }
+	}
+}
+
+@include sp {
+	.wpBtn {
+    position: relative;
+		display: block;
+    max-width: 500px;
+    width: fit-content;
+    margin: vw($spaceMedium) auto 0;
+    padding: vw($spaceSmall) vw($spaceMedium);
+    border-radius: 100vh;
+    background: $accentBg;
+    box-shadow: 0 3px 0 0 $accentShadow;
+    text-align: center;
+    transition: transform $transition, box-shadow $transition;
+    &__text {
+      display: block;
+      color: $white01;
+      font-weight: $fwMedium;
+      font-size: vw($fzMedium);
+    }
+    &:hover {
+      box-shadow: none;
+      transform: translateY(3px);
+    }
+	}
+}

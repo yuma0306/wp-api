@@ -3,12 +3,14 @@
 
 @include pc {
   .wpSection {
-    padding: 60px 0;
+    position: relative;
+    padding-bottom: 80px;
   }
 }
 
 @include sp {
-  .WpSection {
-    padding: vw(60) 0;
+  .wpSection {
+    position: relative;
+    padding-bottom: vw(80);
   }
 }

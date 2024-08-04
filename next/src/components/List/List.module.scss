@@ -4,32 +4,58 @@
 @include pc {
   .list {
     display: grid;
-    padding: 24px 0;
-    gap: 48px;
+    gap: #{$spaceLarge}px;
     &__item {
       display: flex;
-      gap: 24px;
+      gap: #{$spaceBase}px;
       &:nth-child(even) {
         flex-direction: row-reverse;
       }
     }
     &__block {
       flex: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
     }
     &__dl {
       flex: 1;
     }
     &__term {
-      font-size: 24px;
+      font-size: #{$fzLarge}px;
       font-weight: $fwBold;
     }
     &__desc {
-      margin-top: 20px;
+      margin-top: #{$spaceSmall}px;
+    }
+  }
+}
+
+@include tab {
+  .list {
+    &__item {
+      flex-direction: column;
+      &:nth-child(even) {
+        flex-direction: column;
+      }
     }
   }
 }
 
 @include sp {
   .list {
+    display: grid;
+    gap: vw($spaceLarge);
+    &__item {
+      display: grid;
+      gap: vw($spaceSmall);
+    }
+    &__term {
+      font-size: vw($fzLarge);
+      font-weight: $fwBold;
+    }
+    &__desc {
+      margin-top: vw($spaceSmall);
+    }
   }
 }

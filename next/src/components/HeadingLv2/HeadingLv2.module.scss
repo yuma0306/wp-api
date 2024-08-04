@@ -1,0 +1,54 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .headingLv2 {
+    position: relative;
+    width: fit-content;
+    margin: #{$spaceXL}px auto 0;
+    padding-bottom: #{$spaceBase}px;
+    font-size: #{$fzXL}px;
+    text-align: center;
+    font-weight: $fwBold;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 48px;
+      height: 3px;
+      background-color: $primary01;
+    }
+    & + *:not(#_) {
+      margin-top: #{$spaceLarge}px;
+    }
+  }
+}
+
+@include sp {
+  .headingLv2 {
+    position: relative;
+    width: fit-content;
+    margin: vw($spaceXL) auto 0;
+    padding-bottom: vw($spaceBase);
+    font-size: vw($fzXL);
+    text-align: center;
+    font-weight: $fwBold;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 48px;
+      height: 3px;
+      background-color: $primary01;
+    }
+    & + *:not(#_) {
+      margin-top: vw($spaceLarge);
+    }
+  }
+}

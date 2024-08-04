@@ -2,9 +2,6 @@
  * Types
  */
 import type { PostType } from '@/types/Post';
-type Props = {
-  post: PostType;
-}
 /**
  * Components
  */
@@ -17,10 +14,10 @@ import styles from '@/components/List/List.module.scss';
 /**
  * Export default
  */
-export default function List({ post }: Props) {
+export default function List({ list }: { list: PostType['acf']['tool_feature'] }) {
   return (
     <ul className={styles.list}>
-      {post.acf.tool_feature.map((item, index) =>
+      {list.map((item, index) =>
         <li className={`${styles.list__item}`} key={index}>
           <div className={styles.list__block}>
             <WpImg imgID={item.tool_feature_img} />

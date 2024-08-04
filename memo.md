@@ -1,14 +1,10 @@
 ## やること
-- OGPなどSEO周りのタグ修正
-- FAQ作成
-- Footer作成（Zennと同じ感じ）
-- typesファイルの整理
-
-- 相対パスで出力してGitHubPagesで表示できるようにする
-- テストコードを書いてみる
-- 下記のLPをWPから静的に作成する
+- componentのstory bookを作成
 - index.htmlではそのテンプレートの一覧を表示
 - 大元のindex.htmlではすべてのテンプレートのリストを表示
+
+- vercelにoutディレクトリをデプロイ
+- テストコードを書いてみる
 
 ## LP
 - WEB開発ツール紹介
