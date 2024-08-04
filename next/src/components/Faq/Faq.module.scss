@@ -5,62 +5,6 @@
   .faq {
     $this: &;
     border-bottom: 1px solid $primary02;
-    &__item {
-      display: grid;
-      row-gap: 0;
-      padding: #{$spaceBase}px;
-      border-top: 1px solid $primary02;
-      cursor: pointer;
-      &--isActive {
-        row-gap: #{$spaceSmall}px;
-        #{$this}__answer {
-          opacity: 1;
-          visibility: visible;
-        }
-        #{$this}__icon {
-          transform: translateY(-50%) rotate(180deg);
-        }
-      }
-    }
-    &__question {
-      position: relative;
-      font-size: #{$fzMedium}px;
-      font-weight: $fwMedium;
-      padding-right: #{$spaceBase}px;
-    }
-    &__answer {
-      overflow: hidden;
-      transition: $transition height;
-      visibility: hidden;
-      opacity: 0;
-    }
-    &__icon {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      display: inline-block;
-      vertical-align: middle;
-      color: $primary02;
-      line-height: 1;
-      width: 24px;
-      height: 24px;
-      background: currentColor;
-      border-radius: 50%;
-      box-sizing: content-box;
-      transition: $transition transform;
-      &::before {
-        content: '';
-        width: 10px;
-        height: 8px;
-        clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
-        background: $white01;
-        position: absolute;
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
   }
 }
 
@@ -68,61 +12,5 @@
   .faq {
     $this: &;
     border-bottom: 1px solid $primary02;
-    &__item {
-      display: grid;
-      row-gap: 0;
-      padding: vw($spaceBase);
-      border-top: 1px solid $primary02;
-      cursor: pointer;
-      &--isActive {
-        row-gap: vw($spaceSmall);
-        #{$this}__answer {
-          opacity: 1;
-          visibility: visible;
-        }
-        #{$this}__icon {
-          transform: translateY(-50%) rotate(180deg);
-        }
-      }
-    }
-    &__question {
-      position: relative;
-      font-weight: $fwMedium;
-      padding-bottom: 0;
-      padding-right: vw($spaceBase);
-    }
-    &__answer {
-      overflow: hidden;
-      transition: $transition height;
-      visibility: hidden;
-      opacity: 0;
-    }
-    &__icon {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      display: inline-block;
-      vertical-align: middle;
-      color: $primary02;
-      line-height: 1;
-      width: vw(24);
-      height: vw(24);
-      background: currentColor;
-      border-radius: 50%;
-      box-sizing: content-box;
-      transition: $transition transform;
-      &::before {
-        content: '';
-        width: vw(10);
-        height: vw(8);
-        clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
-        background: $white01;
-        position: absolute;
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
   }
 }
