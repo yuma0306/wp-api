@@ -14,8 +14,12 @@ import type { MetaType } from '@/types/Meta';
 /**
  * Component
  */
+import Faq from '@/components/Faq/Faq';
+import Footer from '@/components/Footer/Footer';
+import HeadingLv2 from '@/components/HeadingLv2/HeadingLv2';
 import Inner from '@/components/Inner/Inner';
 import List from '@/components/List/List';
+import WpBtn from '@/components/WpBtn/WpBtn';
 import WpImg from '@/components/WpImg/WpImg';
 import WpSection from '@/components/WpSection/WpSection';
 import Wrapper from '@/components/Wrapper/Wrapper';
@@ -64,9 +68,14 @@ export default function Article({ post, slug }: { post: PostType, slug: MetaType
         </Inner>
         <WpSection>
           <Inner>
-            <List post={ post } />
+            <HeadingLv2>Feature</HeadingLv2>
+            <List list={ post.acf.tool_feature } />
+            <HeadingLv2>FAQ</HeadingLv2>
+            <Faq faq={ post.acf.tool_faq } />
+            <WpBtn />
           </Inner>
         </WpSection>
+        <Footer />
       </Wrapper>
     </>
   );

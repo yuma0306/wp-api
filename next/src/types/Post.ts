@@ -15,6 +15,11 @@ export type PostType = WP_REST_API_Attachment & {
       tool_feature_desc: string;
       tool_feature_img: number;
     }[];
+    tool_faq: {
+      tool_faq_question: string;
+      tool_faq_answer: string;
+    }[]
+    tool_link: string;
   };
   slug: string;
 };

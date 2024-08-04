@@ -1,0 +1,38 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+	.wpBtn {
+    position: relative;
+		display: block;
+    max-width: 500px;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 14px 24px;
+    border-radius: 100vh;
+    background: $accentBg;
+    box-shadow: 0 3px 0 0 $accentShadow;
+    text-align: center;
+    transition: transform .3s, box-shadow .3s;
+    &__text {
+      display: block;
+      color: $white01;
+      font-weight: $fwBold;
+    }
+    &:hover {
+      box-shadow: none;
+      transform: translateY(3px);
+    }
+	}
+}
+
+@include sp {
+	.wpBtn {
+		display: block;
+    width: fit-content;
+    margin: 0 auto;
+    &__text {
+      display: block;
+    }
+	}
+}

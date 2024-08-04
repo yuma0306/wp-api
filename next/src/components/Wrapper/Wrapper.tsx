@@ -2,6 +2,8 @@
  * Style
  */
 import styles from '@/components/Wrapper/Wrapper.module.scss';
+import { Noto_Sans_JP } from 'next/font/google';
+const notoSansJP = Noto_Sans_JP({ subsets: ['latin'], display: 'swap' });
 
 type Props = {
   children: React.ReactNode;
@@ -11,7 +13,7 @@ type Props = {
 export default function Wrapper({ children, addClass }: Props) {
   return (
     <>
-      <div className={`${styles.wrapper} ${addClass}`}>
+      <div className={`${notoSansJP.className} ${styles.wrapper} ${addClass}`}>
         { children }
       </div>
     </>

@@ -4,7 +4,6 @@
 @include pc {
   .list {
     display: grid;
-    padding: 24px 0;
     gap: 48px;
     &__item {
       display: flex;

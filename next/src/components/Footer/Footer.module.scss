@@ -1,0 +1,26 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .footer {
+    padding: 24px 0;
+    border-top: 1px solid $gray01;
+    &__copy {
+      display: block;
+      font-size: $fzSmallPC;
+      text-align: center;
+    }
+  }
+}
+
+@include sp {
+  .footer {
+    padding: vw(24) 0;
+    border-top: vw(1) solid $gray01;
+    &__copy {
+      display: block;
+      font-size: $fzSmallSP;
+      text-align: center;
+    }
+  }
+}
