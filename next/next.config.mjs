@@ -1,3 +1,6 @@
+const isProd = process.env.NODE_ENV === 'production'
+const prefixPath = isProd ? '/wp-api' : ''
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,6 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: prefixPath,
+  assetPrefix: prefixPath,
 };
 
 export default nextConfig;
