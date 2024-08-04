@@ -16,6 +16,7 @@ import type { MetaType } from '@/types/Meta';
  */
 import Faq from '@/components/Faq/Faq';
 import Footer from '@/components/Footer/Footer';
+import Fv from '@/components/Fv/Fv';
 import HeadingLv2 from '@/components/HeadingLv2/HeadingLv2';
 import Inner from '@/components/Inner/Inner';
 import List from '@/components/List/List';
@@ -63,9 +64,9 @@ export default function Article({ post, slug }: { post: PostType, slug: MetaType
         <meta property="og:description" content={post.acf.meta_desc_field} />
       </Head>
       <Wrapper>
-        <Inner>
+        <Fv>
           <WpImg imgID={post.acf.tool_fv} />
-        </Inner>
+        </Fv>
         <WpSection>
           <Inner>
             <HeadingLv2>Feature</HeadingLv2>
