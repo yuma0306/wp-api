@@ -7,17 +7,18 @@
 		display: block;
     max-width: 500px;
     width: fit-content;
-    margin: 40px auto 0;
-    padding: 14px 24px;
+    margin: #{$spaceMedium}px auto 0;
+    padding: #{$spaceSmall}px #{$spaceMedium}px;
     border-radius: 100vh;
     background: $accentBg;
     box-shadow: 0 3px 0 0 $accentShadow;
     text-align: center;
-    transition: transform .3s, box-shadow .3s;
+    transition: transform $transition, box-shadow $transition;
     &__text {
       display: block;
       color: $white01;
-      font-weight: $fwBold;
+      font-weight: $fwMedium;
+      font-size: #{$fzMedium}px;
     }
     &:hover {
       box-shadow: none;
@@ -28,11 +29,26 @@
 
 @include sp {
 	.wpBtn {
+    position: relative;
 		display: block;
+    max-width: 500px;
     width: fit-content;
-    margin: 0 auto;
+    margin: vw($spaceMedium) auto 0;
+    padding: vw($spaceSmall) vw($spaceMedium);
+    border-radius: 100vh;
+    background: $accentBg;
+    box-shadow: 0 3px 0 0 $accentShadow;
+    text-align: center;
+    transition: transform $transition, box-shadow $transition;
     &__text {
       display: block;
+      color: $white01;
+      font-weight: $fwMedium;
+      font-size: vw($fzMedium);
+    }
+    &:hover {
+      box-shadow: none;
+      transform: translateY(3px);
     }
 	}
 }

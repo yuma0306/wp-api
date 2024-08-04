@@ -13,7 +13,7 @@ type Props = {
 export default function Wrapper({ children, addClass }: Props) {
   return (
     <>
-      <div className={`${notoSansJP.className} ${styles.wrapper} ${addClass}`}>
+      <div className={`${notoSansJP.className} ${styles.wrapper} ${addClass ? addClass : ''}`}>
         { children }
       </div>
     </>

@@ -3,13 +3,13 @@
 
 @include pc {
   .inner {
-    max-width: 1000px;
+    max-width: vwMin($innerWidthPC);
     margin: 0 auto;
   }
 }
 
 @include sp {
   .inner {
-    margin: 0 vw(20);
+    margin: 0 vw($innerWidthSP);
   }
 }

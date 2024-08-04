@@ -5,12 +5,11 @@
   .headingLv2 {
     position: relative;
     width: fit-content;
-    margin: 64px auto 0;
-    padding-bottom: 12px;
-    font-size: $fzXLPC;
+    margin: #{$spaceXL}px auto 0;
+    padding-bottom: #{$spaceBase}px;
+    font-size: #{$fzXL}px;
     text-align: center;
     font-weight: $fwBold;
-    font-size: $fzXLPC;
     &::after {
       content: '';
       position: absolute;
@@ -23,19 +22,33 @@
       background-color: $primary01;
     }
     & + *:not(#_) {
-      margin-top: 48px;
+      margin-top: #{$spaceLarge}px;
     }
   }
 }
 
 @include sp {
   .headingLv2 {
-    margin-top: vw(48);
-    font-size: $fzXLSP;
+    position: relative;
+    width: fit-content;
+    margin: vw($spaceXL) auto 0;
+    padding-bottom: vw($spaceBase);
+    font-size: vw($fzXL);
     text-align: center;
     font-weight: $fwBold;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 48px;
+      height: 3px;
+      background-color: $primary01;
+    }
     & + *:not(#_) {
-      margin-top: vw(24);
+      margin-top: vw($spaceLarge);
     }
   }
 }

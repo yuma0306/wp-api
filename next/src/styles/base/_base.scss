@@ -7,9 +7,14 @@ body {
 }
 
 // pc・sp
-p,li,dt,dd,a,h1,h2,h3,h4 {
+p,li,dt,dd,a {
 	line-height: $lhBase;
 	letter-spacing: $lsBase;
+}
+
+h1,h2,h3,h4 {
+  line-height: $lhSmall;
+  letter-spacing: $lsBase;
 }
 
 // image
@@ -28,13 +33,13 @@ picture {
 // pc
 @include pc {
 	p,li,dt,dd,a {
-		font-size: $fzBasePC;
+		font-size: #{$fzBase}px;
 	}
 }
 
 // sp
 @include sp {
 	p,li,dt,dd,a {
-		font-size: $fzBaseSP;
+		font-size: vw($fzBase);
 	}
 }

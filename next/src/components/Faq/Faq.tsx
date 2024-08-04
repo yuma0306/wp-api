@@ -17,7 +17,7 @@ export default function Faq({ faq }: { faq: PostType['acf']['tool_faq'] }) {
   return (
     <div className={styles.faq}>
       {faq.map((item, index) => {
-        const [isActive, setIsActive] = useState(false);
+        const [isActive, setIsActive] = useState<boolean>(false);
         const refAnswer = useRef<HTMLDListElement>(null);
         return (
           <dl

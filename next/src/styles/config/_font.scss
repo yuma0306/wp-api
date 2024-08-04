@@ -1,4 +1,3 @@
-
 // font-size PC
 $fzSmallPC: 14px;
 $fzBasePC: 16px;
@@ -13,6 +12,12 @@ $fzMediumSP: calc(1vw * 22 / 390 * 100);
 $fzLargeSP: calc(1vw * 26 / 390 * 100);
 $fzXLSP: calc(1vw * 30 / 390 * 100);
 
+$fzSmall: 14;
+$fzBase: 16;
+$fzMedium: 18;
+$fzLarge: 22;
+$fzXL: 30;
+
 // font-weight
 $fwBold: 700;
 $fwMedium: 500;
@@ -20,7 +25,8 @@ $fwNormal: 400;
 
 // line-height
 $lhFlat: 1;
-$lhBase: 1.4;
+$lhSmall: 1.4;
+$lhBase: 1.8;
 
 // letter-speacing
 $lsBase: .04em;

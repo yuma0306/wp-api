@@ -11,7 +11,7 @@ type Props = {
 export default function HeadingLv2({ children, addClass }: Props) {
   return (
     <>
-      <h2 className={`${styles.headingLv2} ${addClass}`}>
+      <h2 className={`${styles.headingLv2} ${addClass ? addClass : ''}`}>
         { children }
       </h2>
     </>
