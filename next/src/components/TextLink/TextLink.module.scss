@@ -1,0 +1,18 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .textLink {
+      color: $primary01;
+      text-decoration: underline;
+      @include hoverOpacity();
+    }
+  }
+
+@include sp {
+  .textLink {
+    color: $primary01;
+    text-decoration: underline;
+    @include hoverOpacity();
+  }
+}
