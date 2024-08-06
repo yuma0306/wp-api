@@ -11,6 +11,9 @@ import Inner from '@/components/Inner/Inner';
 import List02 from '@/components/List02/List02';
 import WpSection from '@/components/WpSection/WpSection';
 import Wrapper from '@/components/Wrapper/Wrapper';
+/**
+ * Types
+ */
 import type { PostType } from '@/types/Post';
 /**
  * Constants
@@ -39,7 +42,7 @@ export const getStaticProps = async () => {
  * Export default
  */
 export default function Index({ templates }: { templates: PostType[] }) {
-  console.log(templates);
+  // console.log(templates);
   return (
     <>
       <Head>

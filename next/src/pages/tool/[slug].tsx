@@ -41,7 +41,7 @@ export const getStaticProps = getTemplateProps('page-lp-tool.php');
  * Export default
  */
 export default function Article({ post, slug }: { post: PostType, slug: MetaType['slug'] }) {
-  // console.log(post);
+  console.log(post);
   const robotsTag = getRobotsTag({ noindex: post.acf.noindex_field, nofollow: post.acf.nofollow_field });
   const canonicalUrl = post.acf.canonical_field || `${host}/tool/${slug}/`;
   const ogUrl = post.acf.og_url_field || `${host}/tool/${slug}/`;
@@ -73,7 +73,11 @@ export default function Article({ post, slug }: { post: PostType, slug: MetaType
             <List list={ post.acf.tool_feature } />
             <HeadingLv2>FAQ</HeadingLv2>
             <Faq faq={ post.acf.tool_faq } />
-            <WpBtn />
+            <WpBtn
+              target={post.acf.tool_cta.target}
+              title={post.acf.tool_cta.title}
+              url={post.acf.tool_cta.url}
+            />
           </Inner>
         </WpSection>
         <Footer />
