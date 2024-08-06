@@ -1,0 +1,44 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .list02 {
+    display: grid;
+    row-gap: #{$spaceSmall}px;
+    &__item {
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: $primary02;
+        border-radius: 50%;
+        content: "";
+      }
+    }
+  }
+}
+
+@include sp {
+  .list02 {
+    display: grid;
+    row-gap: vw($spaceSmall);
+    &__item {
+      position: relative;
+      padding-left: vw(20);
+      &::before {
+        position: absolute;
+        top: vw(10);
+        left: 0;
+        width: vw(10);
+        height: vw(10);
+        background-color: $primary02;
+        border-radius: 50%;
+        content: "";
+      }
+    }
+  }
+}

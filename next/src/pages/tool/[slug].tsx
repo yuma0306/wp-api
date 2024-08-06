@@ -41,7 +41,7 @@ export const getStaticProps = getTemplateProps('page-lp-tool.php');
  * Export default
  */
 export default function Article({ post, slug }: { post: PostType, slug: MetaType['slug'] }) {
-  // console.log(post);
+  console.log(post);
   const robotsTag = getRobotsTag({ noindex: post.acf.noindex_field, nofollow: post.acf.nofollow_field });
   const canonicalUrl = post.acf.canonical_field || `${host}/tool/${slug}/`;
   const ogUrl = post.acf.og_url_field || `${host}/tool/${slug}/`;
@@ -54,14 +54,14 @@ export default function Article({ post, slug }: { post: PostType, slug: MetaType
         <meta name="robots" content={robotsTag} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={post.acf.meta_title_field} />
+        <meta property="og:description" content={post.acf.meta_desc_field} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ja_JP" />
-        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:url" content={ogUrl} />
         <meta property="og:site_name" content={post.acf.meta_title_field} />
         <meta property="og:image" content={ogImg} />
-        <meta property="og:title" content={post.acf.meta_title_field} />
-        <meta property="og:description" content={post.acf.meta_desc_field} />
       </Head>
       <Wrapper>
         <Fv>
@@ -73,7 +73,11 @@ export default function Article({ post, slug }: { post: PostType, slug: MetaType
             <List list={ post.acf.tool_feature } />
             <HeadingLv2>FAQ</HeadingLv2>
             <Faq faq={ post.acf.tool_faq } />
-            <WpBtn />
+            <WpBtn
+              target={post.acf.tool_cta.target}
+              title={post.acf.tool_cta.title}
+              url={post.acf.tool_cta.url}
+            />
           </Inner>
         </WpSection>
         <Footer />

@@ -18,8 +18,12 @@ export type PostType = WP_REST_API_Attachment & {
     tool_faq: {
       tool_faq_question: string;
       tool_faq_answer: string;
-    }[]
-    tool_link: string;
+    }[];
+    tool_cta: {
+      target?: string;
+      title: string;
+      url: string;
+    };
   };
   slug: string;
 };

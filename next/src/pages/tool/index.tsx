@@ -20,17 +20,20 @@ import type { PostType } from '@/types/Post';
  */
 import { host, ogpDefault } from '@/constants/wp';
 
+const templateName = 'page-lp-tool.php';
+
 export const getStaticProps = async () => {
   const res = await fetch(`http://localhost/wp-json/wp/v2/pages/`);
   const posts: PostType[] = await res.json();
-  if (!posts) {
+  const templates = posts.filter(item => item.template === templateName);
+  if (!templates) {
     return {
       notFound: true,
     };
   }
   return {
     props: {
-      posts,
+      templates,
     },
   };
 };
@@ -38,29 +41,30 @@ export const getStaticProps = async () => {
 /**
  * Export default
  */
-export default function Index({ posts }: { posts: PostType[] }) {
+export default function Index({ templates }: { templates: PostType[] }) {
+  // console.log(templates);
   return (
     <>
       <Head>
-        <title>LP一覧</title>
-        <meta name="description" content="LPの一覧です。" />
+        <title>ツールLP一覧</title>
+        <meta name="description" content="ツールLPの一覧です。" />
         <meta name="robots" content="none" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={`${host}`} />
-        <meta property="og:title" content="LP一覧" />
-        <meta property="og:description" content="LPの一覧です。" />
+        <link rel="canonical" href={`${host}/tool/`} />
+        <meta property="og:title" content="ツールLP一覧" />
+        <meta property="og:description" content="ツールLPの一覧です。" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ja_JP" />
-        <meta property="og:url" content={`${host}`} />
-        <meta property="og:site_name" content="LP一覧" />
+        <meta property="og:url" content={`${host}/tool/`} />
+        <meta property="og:site_name" content="ツールLP一覧" />
         <meta property="og:image" content={ogpDefault} />
       </Head>
       <Wrapper>
         <WpSection>
           <Inner>
-            <HeadingLv2>LP一覧</HeadingLv2>
-            <List02 list={posts} />
+            <HeadingLv2>ツールLP一覧</HeadingLv2>
+            <List02 list={templates} />
           </Inner>
         </WpSection>
         <Footer />

@@ -19,10 +19,9 @@ npm run build
 ```
 
 ## やること
-- componentのstory bookを作成
-- index.htmlではそのテンプレートの一覧を表示
-- vercelにoutディレクトリをデプロイ
-- テストコードを書いてみる
+1. componentのstory bookを作成
+1. vercelにoutディレクトリをデプロイ
+1. テストコードを書いてみる
 
 ### Cursorを勧めるLP
 - https://www.cursor.com/
